@@ -12,6 +12,7 @@ public class PlayerController : MonoBehaviour
     private float y = 0;
     Vector3 direction = new Vector3(0, 0, 0); 
     Vector3 velocity = new Vector3(0, 0, 0);
+    public GameObject col;
 
     void Start()
     {
@@ -39,6 +40,12 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
+        if (Keyboard.current[Key.Space].wasPressedThisFrame)
+        {
+            col.GetComponent<Collision>().switchCollision();
+        }
+
         // Velocity is direction * speed
         velocity = direction * speed * Time.deltaTime;
         // Add velocity to position 
@@ -69,6 +76,7 @@ public class PlayerController : MonoBehaviour
             vehiclePosition = new Vector3(vehiclePosition.x, -5f, 0);
             transform.position = vehiclePosition;
         }
+
 
     }
 }

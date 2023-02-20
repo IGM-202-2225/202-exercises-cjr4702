@@ -5,7 +5,7 @@ using UnityEngine.InputSystem;
 
 public class Collision : MonoBehaviour
 {
-    bool AABB = true;
+    public bool AABB = true;
     public Sprite carS;
     public Sprite coneS;
     public GameObject car;
@@ -34,12 +34,8 @@ public class Collision : MonoBehaviour
 
     }
 
-    // Update is called once per frame
-    void Update()
+    public void switchCollision()
     {
-
-        if (Keyboard.current[Key.Space].wasPressedThisFrame)
-        {
             if (AABB)
             {
                 AABB = false;
@@ -50,7 +46,11 @@ public class Collision : MonoBehaviour
                 AABB = true;
                 text.text = "Current Collision: AABB";
             }
-        }
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
 
         float carLeftX = car.GetComponent<SpriteRenderer>().bounds.min.x;
         float carRightX = car.GetComponent<SpriteRenderer>().bounds.max.x;
