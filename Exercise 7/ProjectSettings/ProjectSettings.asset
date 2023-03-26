@@ -136,7 +136,8 @@ PlayerSettings:
     Others: 1
   bundleVersion: 2.0
   preloadedAssets:
-  - {fileID: 11400000, guid: f6d9dc026bfbc5f429209f43de87a57c, type: 2}
+  - {fileID: 0}
+  - {fileID: 0}
   metroInputSource: 0
   wsaTransparentSwapchain: 0
   m_HolographicPauseOnTrackingLoss: 1
@@ -155,7 +156,8 @@ PlayerSettings:
   resetResolutionOnWindowResize: 0
   androidSupportedAspectRatio: 1
   androidMaxAspectRatio: 2.1
-  applicationIdentifier: {}
+  applicationIdentifier:
+    Standalone: com.IGME-202.Exercise-7
   buildNumber:
     Standalone: 0
     iPhone: 0
